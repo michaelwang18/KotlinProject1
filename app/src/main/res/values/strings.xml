@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Project1_Michael_Wang</string>
+    <string name="initialScore">Score</string>
+    <string name="initialStrike">Strike</string>
+    <string name="flavorText"> Press Start To Begin!</string>
+    <string name="hardmode_disabled">Hardmode (Off)</string>
+    <string name="startB">START</string>
 </resources>

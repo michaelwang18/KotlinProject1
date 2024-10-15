@@ -15,10 +15,10 @@
         android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
+        android:layout_gravity="start"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
-        android:text="Score: 0"
+        android:text="@string/initialScore"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,10 +30,10 @@
         android:id="@+id/strike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
+        android:layout_gravity="start"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
-        android:text="Strike: 0"
+        android:text="@string/initialStrike"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginBottom="32dp"
         android:backgroundTint="#ba92ee"
-        android:text="START"
+        android:text="@string/startB"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Tap Start to Begin!"
+        android:text="@string/flavorText"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,6 +96,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
+        />
+
+
+    <TextView
+        android:id="@+id/hardmode"
+        android:layout_marginTop="48dp"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/hardmode_disabled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#932d80"
+        android:textColor="#FFFFFF"
         />
 
 
