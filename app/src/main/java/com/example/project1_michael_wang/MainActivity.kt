@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -96,12 +97,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
             backing.setBackgroundColor(Color.parseColor("#e7ab7f"))
             started = !started
             startButton.text = if (started) "START" else "RESTART"
+            flavor.text = "YOU WIN"
+
+            val toast: Toast = Toast.makeText(this, "Well Played!", Toast.LENGTH_SHORT)
+            toast.show()
+
             //do toast thimg
         }
         if (strike >= 3){
             backing.setBackgroundColor(Color.parseColor("#7fa6c3"))
             started = !started
             startButton.text = if (started) "START" else "RESTART"
+            flavor.text = "YOU LOSE"
+            val toast: Toast = Toast.makeText(this, "Womp Womp", Toast.LENGTH_SHORT)
+            toast.show()
+
         }
 
     }
@@ -119,10 +129,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
                 strike = 0
                 backing.setBackgroundColor(Color.parseColor("#f0e67d"))
                 flavor.text = "Press Start to Begin (Again)"
+                scoredis.text = "Score: $score"
+                strikedis.text = "Strike: $strike"
 
             } else {
+                score = 0
+                strike = 0
                 setValues()
                 flavor.text = if (maxVal != 1000) "Turn on Hardmode for more fun" else "Have Fun"
+                scoredis.text = "Score: $score"
+                strikedis.text = "Strike: $strike"
             }
         }
 
